@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&family=Poppins:wght@400;500;700&family=Squada+One&display=swap');
+
+
+/* --------- all ----------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background: url(bg01.svg) #000638 no-repeat;
+}
+
+.bg02 {
+    background: url(bg02.svg) no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+/* lebar container*/
+.width {
+    width: 85%;
+    margin: auto;
+}
+
+.floatkiri {
+    float: left;
+}
+
+.floatkanan {
+    float: right;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------ color template ------------*/
+.orange {
+    background-color: #F89729;
+}
+
+.blue {
+    background-color: #0C134B;
+}
+
+.red {
+    background-color: #EF4D3B;
+}
+
+.skyblue {
+    background-color: #43C5F3;
+}
+
+.html-color {
+    background: #F16529;
+}
+
+.css-color {
+    background: #2965F1;
+}
+
+.hitam-65persen {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.filter {
+    opacity: .5;
+    filter: saturate(0);
+}
+
+/*--------------------------------*/
+
+
+.flex {
+    display: flex;
+}
+
+.btn {
+    color: #fff;
+    background-color: #00A880;
+    padding: 8px 16px;
+}
+
+
+
+/* --------- navigasi -------------*/
+
+header {
+    background: #000638;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav {
+    margin: auto;
+    width: 85%;
+    background: #000638;
+    align-items: center;
+}
+
+nav img {
+    width: 24px;
+    position: absolute;
+    visibility: hidden;
+}
+
+
+nav p {
+    font-family: 'montserrat alternates', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    display: block;
+    padding: 8px 16px;
+}
+
+nav .navigasi a {
+    position: relative;
+    z-index: 0;
+}
+
+nav .navigasi a::before {
+    content: "";
+    inset: 0;
+    background: #F89729;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+nav .navigasi a:hover::before {
+    transform: scaleX(1);
+    transform-origin: right;
+    background: #EF4D3B;
+}
+
+nav .navigasi a:hover {
+    color: #fff;
+}
+
+/* ------ sektor satu -----------*/
+
+.sektorsatu {
+    height: 500px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sektorsatu .judul {
+    flex-basis: 50%;
+}
+
+.sektorsatu .gambarutama {
+    flex-basis: 50%;
+}
+
+.sektorsatu .judul h1 {
+    font-family: 'montserrat alternates', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.sektorsatu .judul p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 400px;
+}
+
+.sektorsatu .judul a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+
+    display: inline-block;
+}
+
+.sektorsatu .gambarutama img {
+    width: 85%;
+}
+
+.kotak {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+
+    height: 50px;
+    width: 100px;
+}
+
+
+/* --------- sektor dua -------------*/
+
+.sektordua {
+    height: 550px;
+    align-items: center;
+}
+
+.sektordua div {
+    flex-basis: 50%;
+}
+
+.sektordua img {
+    width: 100%;
+}
+
+
+.sektordua p {
+    text-align: right;
+    font-size: 30px;
+}
+
+/* -------- sektor tiga -------------- */
+.sektortiga {
+    text-align: center;
+    padding: 40px;
+}
+
+/* pembungkus element topik pembelajaran */
+.sektortiga .pembungkus {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sektortiga .pembungkus .card {
+    color: #333;
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.sektortiga .pembungkus .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+
+.sektortiga .pembungkus .card .face.face1 {
+    position: relative;
+    background: #0C134B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.sektortiga .pembungkus .card:hover .face.face1 {
+    background: #43C5F3;
+    transform: translateY(0);
+}
+
+.sektortiga .pembungkus .card .face.face1 .content {
+    filter: saturate(0);
+    transition: 0.5s;
+}
+
+.sektortiga .pembungkus .card:hover .face.face1 .content {
+    opacity: 1;
+    filter: saturate(1);
+}
+
+/* logo topik pembelajaran */
+.sektortiga .pembungkus .card .face.face1 .content img {
+    max-width: 100px;
+}
+
+.sektortiga .pembungkus .card .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sektortiga .pembungkus .card .face.face2 {
+    text-align: left;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.sektortiga .pembungkus .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.sektortiga .pembungkus .card .face.face.face2 .content p {
+    margin: 0;
+    padding: 0;
+}
+
+.sektortiga .pembungkus .card .face.face2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
+
+.sektortiga .pembungkus .card .face.face2 .content a:hover {
+    background: #0C134B;
+    color: #fff;
+}
+
+.sektortiga a {
+    color: #fff;
+    opacity: 0.5;
+}
+
+/*------ sektor empat -------*/
+.sektorempat {
+    background-image: linear-gradient(to top, rgba(0, 0, 56, 0.7) 50%, rgba(0, 0, 0, 0.7) 100%), url(background_event.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 40px;
+    height: 500px;
+}
+
+.sektorempat h2 {
+    margin-bottom: 90px;
+}
+
+.sektorempat .pembungkus {
+    justify-content: center;
+}
+
+.sektorempat .pembungkus .card {
+    text-align: center;
+    padding-top: 20px;
+    width: 140px;
+    height: 200px;
+    margin: 10px;
+    box-shadow: 0px 10px 10px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+.sektorempat .pembungkus .card:hover {
+    transform: translateY(-40px);
+    box-shadow: 0px 40px 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.sektorempat .pembungkus .card img {
+    width: 100px;
+}
+
+.sektorempat .pembungkus .card h3 {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.sektorempat .pembungkus .card p {
+    margin-top: -10px;
+    font-size: 12px;
+}
+
+
+
+/* ------ sektor footer --------*/
+
+footer {
+    background: #0C134B url(bg_footer.svg) no-repeat;
+
+    align-items: center;
+    padding: 40px;
+    overflow: auto;
+}
+
+footer .kiri {
+    flex-basis: 50%;
+    padding-top: 10px;
+}
+
+footer .kanan {
+    flex-basis: 15%;
+    text-align: right;
+}
+
+footer .logofooter {
+
+    background-color: #EF4D3B;
+    padding: 4px;
+    height: 42px;
+
+    overflow: unset;
+}
+
+footer .logofooter img {
+    width: 40px;
+}
+
+footer h3 {
+    font-family: 'montserrat alternates';
+    font-size: 30px;
+    margin: 10px;
+    display: inline;
+}
+
+footer p {
+    margin-top: 30px;
+}
+
+.pembungkus-icon {
+    align-items: center;
+    margin-top: 30px;
+}
+
+.pembungkus-icon a {
+    margin-right: 30px;
+}
+
+footer .kanan a {
+    color: wheat;
+    padding: 10px;
+}
+
+.footer-button {
+    background-color: #00A880;
+    display: inline;
+}
+
+@media screen and (max-width:800px) {
+    .gambarutama {
+        visibility: hidden;
+    }
+
+    /* --- sektor dua ---*/
+
+    .sektordua {
+        flex-direction: column;
+    }
+
+    .sektordua p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* ---- sektor tiga ------*/
+    .sektortiga .card {
+        font-size: 11px;
+        margin: 5px;
+    }
+
+    .sektortiga .card .face {
+        width: 150px;
+        height: 200px;
+    }
+
+    .sektortiga .card .face.face1 {
+        transform: translateY(150px);
+    }
+
+    /* logo topik pembelajaran */
+    .sektortiga .card .face.face1 .content img {
+        max-width: 50px;
+    }
+
+    .sektortiga .card .face.face1 .content h3 {
+        font-size: 9px;
+    }
+
+    .sektortiga .card .face.face2 {
+        text-align: left;
+        position: relative;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        transform: translateY(-50px);
+    }
+
+    /* --- footer ---- */
+
+    footer p,
+    a {
+        font-size: 14px;
+    }
+
+
+}
+
+/*///////////////// max 513 ////////////*/
+@media screen and (max-width:513px) {
+
+
+    body,
+    main div {
+        background: url();
+    }
+
+    body {
+        background: #000638;
+    }
+
+    nav {
+        width: 90%;
+        align-items: center;
+    }
+
+    nav img {
+        position: static;
+        visibility: visible;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    nav p {
+        font-size: 11px;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    /* ----  sektor satu -----*/
+
+    .kotak {
+        visibility: hidden;
+    }
+
+    .gambarutama {
+        visibility: hidden;
+    }
+
+    .sektorsatu .judul h1 {
+        font-size: 38px;
+    }
+
+
+    /* ---- sektor tiga ------*/
+
+
+    .sektortiga .pembungkus {
+        background: url();
+        height: auto;
+        flex-direction: column;
+    }
+
+    /* ---- sektorempat ---- */
+    .sektorempat {
+        height: auto;
+    }
+
+    .sektorempat .pembungkus {
+        width: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sektorempat .pembungkus .card {
+        width: 200px;
+        margin: 10px;
+    }
+
+
+    /* ---- footer --- */
+    footer {
+        background: url()#0C134B;
+        padding: 10px;
+        height: auto;
+    }
+
+    footer .kiri h3 {
+        font-size: 14px;
+        visibility: hidden;
+        color: #00A880;
+    }
+
+    footer .reverse {
+        flex-direction: column-reverse;
+    }
+
+    footer .kanan {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer .kanan .hidden {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    footer .kanan a {
+        font-size: 11px;
+    }
+
+}
+
+
+/*//////////////////////////  dibawah  ///////////////*/
+/*//////////////////////////  ini   ///////////////*/
+/*//////////////////////////  adalah  ///////////////*/
+/*//////////////////////////  halaman  ///////////////*/
+/*//////////////////////////  about  ///////////////*/
+
+/* ----- sektor1 about ----- */
+.sektor1 .gambar-team2 {
+    align-items: center;
+    justify-content: center;
+}
+
+/*---- sektor2 about ----- */
+.sektor2 {
+    padding: 40px 0;
+}
+
+.sektor2 .pembungkus-luar {
+    flex-direction: column;
+}
+
+.sektor2 .pembungkus-luar .pembungkus .about {
+    flex-basis: 40%;
+}
+
+.sektor2 .about h4 {
+    font-family: 'montserrat alternates', sans-serif;
+    font-size: 24px;
+}
+
+/*---- sektor3 about ----*/
+.sektor3 {
+    padding: 100px 0;
+}
+
+.sektor3 .p-kiri {
+    flex-basis: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sektor3 .p-kanan {
+    flex-basis: 50%;
+}
+
+.sektor3 .p-kanan h3 {
+    font-family: 'montserrat alternates', sans-serif;
+    font-size: 24px;
+}
+
+.sektor3 .p-kanan span {
+    font-weight: bold;
+    padding: 4px;
+}
+
+/* ----- sektor4 ------*/
+.sektor4 {
+    padding: 40px 0;
+}
+
+.sektor4 h2 {
+    font-family: 'montserrat alternates';
+    text-align: center;
+}
+
+.sektor4 .pembungkus-luar {
+    align-items: center;
+    justify-content: center;
+}
+
+.sektor4 .pembungkus-luar .card {
+    padding: 20px 0 0;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 10px;
+
+    border-left: #EF4D3B solid 14px;
+}
+
+.sektor4 .card .img {
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.sektor4 .card .zaq {
+    background: url(../assets/zaq.jpg);
+    background-size: cover;
+}
+
+.sektor4 .card .ihsan {
+    background: url(../assets/ihsan.jpeg);
+    background-size: cover;
+}
+
+
+.sektor4 .card .sugab {
+    background: url(../assets/sugab.jpeg);
+    background-size: cover;
+}
+
+.sektor4 .card p {
+    margin-top: -20px;
+}
+
+@media screen and (max-width:512px) {
+
+    .sektor1 img {
+        width: 100%;
+    }
+
+    .sektor2 .pembungkus {
+        flex-direction: column;
+    }
+
+    .sektor2 .about h4 {
+        font-family: 'montserrat', sans-serif;
+        font-size: 18px;
+    }
+
+    .sektor2 .about p {
+        font-size: 12px;
+    }
+
+    /*---- sektor3 ---- */
+    .sektor3 .pembungkus-luar {
+        flex-direction: column;
+    }
+
+    .sektor3 .p-kiri img {
+        width: 100%;
+    }
+
+    .sektor3 .p-kiri h3 {
+        font-size: 18px;
+    }
+
+    .sektor3 .p-kiri p {
+        font-size: 12px;
+    }
+
+    .sektor4 .pembungkus-luar {
+        flex-direction: column;
+    }
+
+    .sektor4 .pembungkus-luar .card {
+        width: 200px;
+    }
+
+    .sektor4 .pembungkus-luar .card h3 {
+        font-size: 14px;
+    }
+
+    .sektor4 .pembungkus-luar .card p {
+        font-size: 12px;
+    }
+
+}
